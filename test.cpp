@@ -124,7 +124,7 @@ private:
 
 struct data {
     double ts_;
-    int v_[10];
+    int v_;
 
     double ts() const { return ts_; }
 };
@@ -138,7 +138,7 @@ int main() {
                 break;
             } else if (opt == "append") {
                 double ts;
-                char v[10];
+                int v;
                 std::cin >> ts >> v;
                 shm->append(data{ts, v});
             }
